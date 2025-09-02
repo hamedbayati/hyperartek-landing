@@ -1,53 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HyperArtek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HYPERARTEK — Where AI Meets Innovation</title>
+  <meta name="description" content="HyperArtek builds AI-optimized tech solutions. Where AI meets innovation.">
+  <meta property="og:title" content="HYPERARTEK — Where AI Meets Innovation">
+  <meta property="og:description" content="AI-optimized tech solutions.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0c2a43">
+
+  <!-- Google Font: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg:#0c2a43;
+      --light:#f3f0ed;
+      --hyper:#f3f0ed;
+      --artek:#ed4545;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html, body {
+      height:100%;
+    }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0d1117, #161b22);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:center;
+      background:var(--bg);
+      font-family:"Montserrat", system-ui, sans-serif;
+      color:var(--light);
+      overflow:hidden; /* prevent scroll */
     }
-    h1 {
-      font-size: 3rem;
-      margin: 0.5rem 0;
+    .hero {
+      text-align:center;
+      margin-top:40vh; /* position ~40% from top */
+      transform:translateY(-40%);
     }
-    p {
-      font-size: 1.25rem;
-      color: #c9d1d9;
-      max-width: 600px;
+    .hero h1 {
+      font-size:44px;
+      line-height:1.2;
     }
-    .btn {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: #238636;
-      color: white;
-      text-decoration: none;
+    .hero .hyper {
+      font-weight:700;
+      font-size:37px;
+      color:var(--hyper);
+      margin-right:10px;
     }
-    .btn:hover {
-      background-color: #2ea043;
+    .hero .artek {
+      font-weight:700;
+      font-size:37px;
+      color:var(--artek);
+    }
+    .tagline {
+      font-weight:400;
+      font-size:14px;
+      color:var(--light);
+      opacity:0.9;
+    }
+    footer {
+      text-align:center;
+      font-size:13px;
+      padding:12px 0;
+      width:100%;
+      border-top:1px solid rgba(255,255,255,.1);
+      opacity:.3;
+    }
+    footer a {
+      color:var(--light);
+      text-decoration:none;
+    }
+    footer a:hover {
+      text-decoration:underline;
+    }
+    @media (max-width:600px) {
+      .hero h1 { font-size:32px; }
     }
   </style>
 </head>
 <body>
-  <h1>🚀 Welcome to HyperArtek</h1>
-  <p>
-    Building the next generation of SaaS solutions.  
-    Stay tuned — something amazing is coming soon.
-  </p>
-  <a href="mailto:info@hyperartek.com" class="btn">Contact Us</a>
+  <div class="hero">
+    <h1>
+      <span class="hyper">HYPER</span><span class="artek">ARTEK</span>
+    </h1>
+    <div class="tagline">Where AI Meets Innovation</div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Hyper Artek LLC • 
+    <a href="mailto:info@hyperartek.com">info@hyperartek.com</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
